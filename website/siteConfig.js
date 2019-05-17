@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'Ionic Documentation', // Title for your website.
-  tagline: 'A website for documenting',
+  tagline: 'Personal Documentation of Mobile Apps Department',
   url: 'https://kmramirez3.github.io', // Replace USERNAME with your GitHub username.
   baseUrl: '/ionic-documentation/', // The name of your GitHub project.
   projectName: 'ionic-documentation',  // The name of your GitHub project. Same as above.
@@ -38,45 +38,46 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'coding-convention', label: 'Docs'},
-    {doc: 'plugins', label: 'API'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    {search: true},
+    // {doc: 'plugins', label: 'API'},
+    // {page: 'help', label: 'Help'},
+    // {blog: true, label: 'Blog'},
   ],
 
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/favicon.ico',
-  footerIcon: 'img/favicon.ico',
-  favicon: 'img/favicon.ico',
+  headerIcon: 'img/ionic-logo.ico',
+  footerIcon: 'img/ionic-logo.ico',
+  favicon: 'img/ionic-logo.ico',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#85352b',
-    secondaryColor: '#5d251e',
+    primaryColor: '#274C8C',
+    secondaryColor: '#488AFF',
   },
 
   /* Custom fonts for website */
-  /*
-  fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
-    ]
-  },
-  */
+  
+  // fonts: {
+  //   myFont: [
+  //     "Times New Roman",
+  //     "Serif"
+  //   ],
+  //   myOtherFont: [
+  //     "-apple-system",
+  //     "system-ui"
+  //   ]
+  // },
+  
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
-    theme: 'default',
+    theme: 'vs2015',
   },
 
   // Add custom scripts here that would be placed in <script> tags.
@@ -90,6 +91,11 @@ const siteConfig = {
   // Open Graph and Twitter card images.
   ogImage: 'img/undraw_online.svg',
   twitterImage: 'img/undraw_tweetstorm.svg',
+
+  scrollToTop: true,
+  scrollToTopOptions: {
+    zIndex: 100,
+  },
 
   // Show documentation's last contributor's name.
   // enableUpdateBy: true,

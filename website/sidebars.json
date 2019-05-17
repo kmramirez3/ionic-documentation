@@ -1,5 +1,8 @@
 {
   "docs": {
+    "Ionic Installation": [
+      "installation"
+    ],
     "General Coding Conventions": [
       "coding-convention", 
       "dynamic-theming",
@@ -12,6 +15,10 @@
       "pipes",
       "plugins",
       "providers"
+    ],
+    "Third Party Services": [
+      "push-notification",
+      "socket-io"
     ],
     "Rules and Standards": [],
     "Documentations / Studies": []
