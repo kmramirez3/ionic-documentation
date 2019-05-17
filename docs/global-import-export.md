@@ -57,16 +57,16 @@ We will be using the *camera* plugin as an example.
 1. Install your native plugin using *npm install*
 2. In your `📄 native.exporter.ts` add your native plugin
 
-```
+```js
 export { Camera } from '@ionic-native/camera';
 ```
 
 3. In your page, import your native plugin in your *exports/native.exporter.ts* path
-```
+```js
 import { Camera } from '../../exports/native.exporter';
 ```
 
 4. Lastly, add it on your constructor
-```
+```js
 constructor( public camera: Camera ) 
 ```

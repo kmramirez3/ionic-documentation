@@ -12,12 +12,12 @@ sidebar_label: Coding Convention
 Always remove the auto generated **console.log** of ionic
 
 #### For one line
-```
+```js
 constructor( public navCtrl: NavController ) {}
 ```
 
 #### For two or more lines
-```
+```js
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -29,12 +29,12 @@ constructor( public navCtrl: NavController ) {}
 ### Import / Export
 
 #### For one line
-```
+```js
  import { IonicPage } from 'ionic-angular';
 ```
 
 #### For two or more lines
-```
+```js
 constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -47,7 +47,7 @@ constructor(
 ---
 
 #### 2 lines away for every function
-```
+```js
     viewGallery(img) {
         const modal = this.modalCtrl.create(GalleryModal, {
             photos: this.arrayOfImages,
@@ -75,7 +75,7 @@ Do use **upper camel case** when naming classes.
 - Why? Follows conventional thinking for class names.
 - Why? Classes can be instantiated and construct an instance. By convention, upper camel case indicates a constructable asset.
 
-```
+```js
 /* bad */
 
 export class exceptionService {
@@ -96,7 +96,7 @@ Do declare variables with const if their values should not change during the app
 
 - Why? Conveys to readers that the value is invariant.
 
-```
+```js
 export const nationalHero = 'Jose Rizal';
 export const heroesUrl = 'api/heroes';   
 ```

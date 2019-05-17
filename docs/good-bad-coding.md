@@ -6,31 +6,31 @@ sidebar_label: Good and Bad Coding
 
 ## Attribute / Property Proper Binding
 ---
-```
-//Bad
+```html
+<!-- Bad -->
 <img src=”{{imagePath}}”>
 
 
-//Bad
+<!-- Bad -->
 <img [src]=imagePath>
 
 
-// Good
+<!-- Good -->
 <img [src]=”imagePath”  [disabled]=””>
 ```
 
 ## Line Optimization
 ---
-```
+```js
 // Bad 
-    If (this.value == 1) {  
+    if (this.value == 1) {  
        this.dosomething()
   } else {
           	 this.doDiffThing()
        }
        
     // Good
-    If (this.value == 1) this.dosomething()
+    if (this.value == 1) this.dosomething()
     else this.doDiffThing()
     
     
@@ -46,18 +46,17 @@ sidebar_label: Good and Bad Coding
 
 ## Conditions
 ---
-```
-// Bad 
+```html
+<!--  Bad  -->
     <div *ngIF=”task.done ==  false” >
 
-// Good 
+ <!-- Good  -->
     <div *ngIF=”!task.done” >
 
 
-
-// Bad 
+ <!-- Bad  -->
     <div *ngIF=”task.done ==  true” >
 
-// Good 
+ <!-- Good  -->
     <div *ngIF=”task.done” >
 ```

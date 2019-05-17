@@ -20,7 +20,7 @@ declare EmojiOne plugin `import * as emoji from 'emojione';`
 Choose among the 3 types of conversion
 
 ###### emoji.ts
-```
+```js
 import { Pipe, PipeTransform } from '@angular/core';
 import * as emoji from 'emojione';
 
@@ -39,7 +39,7 @@ export class EmojiPipe implements PipeTransform {
 }
 ```
 ###### emoji-test.html
-```
+```html
 <ion-content padding>
 
   <table>
@@ -80,7 +80,7 @@ This pipe is based on this repo: <https://github.com/FuelInteractive/fuel-ui/tre
 - `orderBy` => for single type array (String or Integer)
 
 Example:
-```
+```html
 <span *ngFor="let n of numberArray | orderBy">{{n}}<span>
 ```
 
@@ -91,14 +91,14 @@ positive(+) sign == ascending(default)
 negative(-) sign == descending
 
 Example:
-```
+```html
 <span *ngFor="let fruit of fruitArray | orderBy : '-'">{{fruit}}<span>
 ```
 
 - `orderBy`: key => for a multidimentional array (array of objects) on single column
 
 Example:
-```
+```html
 <span *ngFor="let todo of todos | orderBy : 'status'">{{todo.name}} - {{todo.status}}<span>
 <span *ngFor="let todo of todos | orderBy : '-status'">{{todo.name}} - {{todo.status}}<span>
 ```
@@ -106,7 +106,7 @@ Example:
 - `orderBy`: ['key1', 'key2'] => for Multidimensional Array Sort on multiple columns
 
 Example:
-```
+```html
 <span *ngFor="let todo of todos | orderBy : ['status', '-title']">{{todo.name}} - {{todo.status}}<span>
 ```
 

@@ -10,7 +10,7 @@ sidebar_label: Ionic Providers
 ### Functions
 
 #### open
-```
+```js
 open(title: string, message: string, buttonsArray: Array<String> = ['OK'], addParams: AlertOptions = {})
 ```
 - **title** : string - title of the alert
@@ -29,7 +29,7 @@ See <https://ionicframework.com/docs/api/components/alert/AlertController/> for 
 ### Basic Usage
 
 ### Declaration
-```
+```js
 import { AlertMessageProvider } from '../../exports/provider.exporter';
 
 constructor(private alertMessage: AlertMessageProvider) {
@@ -39,12 +39,14 @@ constructor(private alertMessage: AlertMessageProvider) {
 
 ### Types of Usage
 - Default Alert
-```
+```js
 this.alertMessage.open('Title', 'Message');
 ```
 
+![Image of Default Alert](https://kmramirez3.github.io/ionic-documentation/img/alert-basic.png)
+
 - With Cancel Button
-```
+```js
 this.alertMessage.open('Title', 'Message', ['Cancel', 'Ok']).then(btn => {
 
         if (btn === 'Ok') {
@@ -59,8 +61,10 @@ this.alertMessage.open('Title', 'Message', ['Cancel', 'Ok']).then(btn => {
 
 })
 ```
+![Image of Default Alert](https://kmramirez3.github.io/ionic-documentation/img/alert-with-cancel.png)
+
 - With Additional Parameters
-```
+```js
 //the user cannot dismiss the alert by clicking the backdrop
 this.alertMessage.open('Title', 'Message', ['Cancel', 'Ok'], { enableBackdropDismiss: false }).then(btn => {
 
@@ -110,7 +114,7 @@ Generate a provider
 `ionic g provider globals`
 
 declare variables you will be using a lot to different modules
-```
+```js
 @Injectable()
 export class GlobalsProvider {
 
@@ -121,7 +125,7 @@ export class GlobalsProvider {
 }
 ```
 import the provider to access your globally declared variables
-```
+```js
 import { GlobalsProvider } from '../../../exports/provider.exporter';
 
 @IonicPage()
@@ -140,7 +144,7 @@ export class GlobalsProviderTestPage {
 }
 ```
 HTML Template
-```
+```html
 <ion-header>
 
   <ion-navbar>
@@ -159,6 +163,8 @@ HTML Template
 </ion-content>
 ```
 
+![Image of Global Declaration](https://kmramirez3.github.io/ionic-documentation/img/global.png)
+
 ## Pluralizer
 
 This provider is use for the angular I18nPluralPipe (reference site: <https://angular.io/api/common/I18nPluralPipe>) that returns an object with a set of conditions base on the length of an array or number.
@@ -168,23 +174,23 @@ This provider is use for the angular I18nPluralPipe (reference site: <https://an
 generate provider `ionic g provider pluralizer`
 
 ###### pluralizer.ts
-```
+```js
 import { Injectable } from '../exports/angular.exporter';
 
-`@Injectable()
+@Injectable()
 export class PluralizerProvider {
 
   setPluralForm(ifZero, ifOne, ifTwoMore) {
     return { '=0': ifZero, '=1': ifOne, 'other': ifTwoMore }
   }
 
-}`
+}
 ```
 
 #### Provider Implementation
 
 ###### pluralizer-test.ts
-```
+```js
 import { PluralizerProvider } from '../../../exports/provider.exporter';
 
 @IonicPage()
@@ -204,14 +210,14 @@ export class PluralizeProviderTestPage {
   }
 ```
 ###### pluralizer-test.html
-```
+```html
 `<p text-center>{{ messages.length | i18nPlural: pluralizerForMessages() }}</p>`
 ```
 
 ## Toast
 ---
 
-```
+```js
 presentToast(payload: ToastOptions, callback: VoidFunction = this.defaultCallback) {  }
 ```
 
@@ -224,7 +230,7 @@ presentToast(payload: ToastOptions, callback: VoidFunction = this.defaultCallbac
 ### Basic Usage
 
 #### Declaration
-```
+```js
 import { ToastMessageProvider } from '../../exports/provider.exporter';
 
 constructor(private toastMessage: ToastMessageProvider) {
@@ -234,12 +240,12 @@ constructor(private toastMessage: ToastMessageProvider) {
 #### Types of Usage
 - Default Toast
 The expected required parameters in the first is always an object. It has an intellisense for the required properties in the object base from `ToastOptions`.
-```
+```js
 this.toastMessage.presentToast({ message: 'TADAHHH!!!', duration: 3000 });
 ```
 
 - Toast with Callback
-```
+```js
 showToast() { 
     this.toastMsg.presentToast({ message: 'TADAHHH!!!' }, () => {
      console.log('Toast has been dismissed')

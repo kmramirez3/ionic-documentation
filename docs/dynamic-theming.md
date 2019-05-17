@@ -8,7 +8,7 @@ sidebar_label: Dynamic Theming
 ---
 
 *Under src/themes folder*
-```
+```scss
 // Filename: theme.#{color}.scss or theme.dark.scss
 
 .#{color}-theme { //theme.dark.scss, theme.red.scss, ....
@@ -33,7 +33,7 @@ sidebar_label: Dynamic Theming
 }  
 ```
 *Import scss file on variables.scss*
-```
+```js
 @import "theme.light";
 @import "theme.dark";
 ```
@@ -42,7 +42,7 @@ sidebar_label: Dynamic Theming
 ---
 
 *open your src/providers/settings/settings.ts and insert*
-```
+```js
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/Rx';
  
@@ -68,7 +68,7 @@ export class SettingsProvider {
 ## Page That Triggers the Theme
 ---
 *page.ts*
-```
+```js
 //import settings
 import { SettingsProvider } from './../../providers/settings';
 
@@ -132,7 +132,7 @@ export class ThemingPage {
 ## Last Step
 ---
 
-```
+```js
 import { SettingsProvider } from './../providers/settings/settings';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';

@@ -8,13 +8,13 @@ For more than (2) two condition of element we must use a function. Example below
 
 ## .HTML
 ---
-```
+```js
 {{showPostDescription(message)}}
 ```
 
 ## .TS
 ---
-```
+```js
 showPostDescription(message) {
     let sender = this.isSender(message)
     if (message.messages[message.messages.length - 1].post.type == 'market') {
