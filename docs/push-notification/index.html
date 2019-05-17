@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Push Notification - OneSignal · Ionic Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;This application uses &lt;strong&gt;OneSignal&lt;/strong&gt; - a high volume and reliable push notification service for websites and mobile applications. It support all major native and mobile platforms by providing dedicated SDKs for each platform, a RESTful server API, and an online dashboard for marketers to design and send push notifications. &lt;a href=&quot;https://documentation.onesignal.com/docs&quot;&gt;https://documentation.onesignal.com/docs&lt;/a&gt;&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Push Notification - OneSignal · Ionic Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kmramirez3.github.io/ionic-documentation/"/><meta property="og:description" content="&lt;p&gt;This application uses &lt;strong&gt;OneSignal&lt;/strong&gt; - a high volume and reliable push notification service for websites and mobile applications. It support all major native and mobile platforms by providing dedicated SDKs for each platform, a RESTful server API, and an online dashboard for marketers to design and send push notifications. &lt;a href=&quot;https://documentation.onesignal.com/docs&quot;&gt;https://documentation.onesignal.com/docs&lt;/a&gt;&lt;/p&gt;
+"/><meta property="og:image" content="https://kmramirez3.github.io/ionic-documentation/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kmramirez3.github.io/ionic-documentation/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/ionic-documentation/img/ionic-logo.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kmramirez3.github.io/ionic-documentation/blog/atom.xml" title="Ionic Documentation Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kmramirez3.github.io/ionic-documentation/blog/feed.xml" title="Ionic Documentation Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/ionic-documentation/css/main.css"/><script src="/ionic-documentation/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/ionic-documentation/"><img class="logo" src="/ionic-documentation/img/ionic-logo.png" alt="Ionic Documentation"/><h2 class="headerTitleWithLogo">Ionic Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/ionic-documentation/docs/coding-convention" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/ionic-documentation/docs/plugins" target="_self">API</a></li><li class=""><a href="/ionic-documentation/help" target="_self">Help</a></li><li class=""><a href="/ionic-documentation/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Third Party Services</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">General Coding Conventions</h3><ul class=""><li class="navListItem"><a class="navItem" href="/ionic-documentation/docs/coding-convention">Coding Convention</a></li><li class="navListItem"><a class="navItem" href="/ionic-documentation/docs/dynamic-theming">Dynamic Theming</a></li><li class="navListItem"><a class="navItem" href="/ionic-documentation/docs/global-import-export">Global Import And Exports Of Modules</a></li><li class="navListItem"><a class="navItem" href="/ionic-documentation/docs/global-bad-coding">Good and Bad Coding</a></li><li class="navListItem"><a class="navItem" href="/ionic-documentation/docs/multiple-condition">Mutiple Condition</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Ionic Services</h3><ul class=""><li class="navListItem"><a class="navItem" href="/ionic-documentation/docs/modules">Ionic Module</a></li><li class="navListItem"><a class="navItem" href="/ionic-documentation/docs/pipes">Ionic Pipes</a></li><li class="navListItem"><a class="navItem" href="/ionic-documentation/docs/plugins">Ionic Plugins</a></li><li class="navListItem"><a class="navItem" href="/ionic-documentation/docs/providers">Ionic Providers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Third Party Services</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/ionic-documentation/docs/push-notification">Push Notification</a></li><li class="navListItem"><a class="navItem" href="/ionic-documentation/docs/socket-io">Real Time Engine</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Push Notification - OneSignal</h1></header><article><div><span><p>This application uses <strong>OneSignal</strong> - a high volume and reliable push notification service for websites and mobile applications. It support all major native and mobile platforms by providing dedicated SDKs for each platform, a RESTful server API, and an online dashboard for marketers to design and send push notifications. <a href="https://documentation.onesignal.com/docs">https://documentation.onesignal.com/docs</a></p>
+<h2><a class="anchor" aria-hidden="true" id="onesignal-setup"></a><a href="#onesignal-setup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OneSignal Setup</h2>
+<hr>
+<p>Documentation available here:
+<a href="https://docs.google.com/document/d/1IpwuFwIXSMX5BCT82n2P-WZB2L1J4UXeyLsokHE2TEY/edit">https://docs.google.com/document/d/1IpwuFwIXSMX5BCT82n2P-WZB2L1J4UXeyLsokHE2TEY/edit</a>
+<a href="https://medium.com/appseed-io/how-to-integrate-onesignal-push-notifications-into-an-ionic-3-application-eb2fdc3e6176">https://medium.com/appseed-io/how-to-integrate-onesignal-push-notifications-into-an-ionic-3-application-eb2fdc3e6176</a></p>
+<h3><a class="anchor" aria-hidden="true" id="generate-a-google-server-api-key-server-key"></a><a href="#generate-a-google-server-api-key-server-key" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Generate a Google Server API Key (SERVER KEY)</h3>
+<p>The application we are going to build, uses <strong>Firebase</strong> in order to generate a Google Server API Key. This key allows OneSignal to use Google’s web push services for your notifications.</p>
+<p>Visit <a href="https://console.firebase.google.com/">https://console.firebase.google.com/</a> and create a new project.</p>
+<p><strong>Sample Credentials:</strong> Project ID: onesignal-test-7763c (email: vrferrer.halcyondigital)</p>
+<p><img src="https://kmramirez3.github.io/ionic-documentation/img/1.png" alt="Image of Adding Project"></p>
+<p><img src="https://kmramirez3.github.io/ionic-documentation/img/2.png" alt="Image of Adding Project"></p>
+<h4><a class="anchor" aria-hidden="true" id="get-your-firebase-cloud-messaging-token-and-sender-id"></a><a href="#get-your-firebase-cloud-messaging-token-and-sender-id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get your Firebase Cloud Messaging token and Sender ID</h4>
+<ul>
+<li>Click the <strong>gear icon</strong> at the top left of the page and select <strong>Project Settings</strong></li>
+</ul>
+<p><img src="https://kmramirez3.github.io/ionic-documentation/img/3.png" alt="Image of Project Setting"></p>
+<ul>
+<li>Select the <strong>Cloud Messaging</strong> tab.</li>
+<li>Make a note of the two values listed:</li>
+</ul>
+<p>You’ll need your <strong>Servery Key</strong>, also known as the Google Server API key.</p>
+<p>You’ll need your <strong>Sender ID</strong>, also known as the Google Project Number, later as well.</p>
+<p><img src="https://kmramirez3.github.io/ionic-documentation/img/4.png" alt="Image of Settings"></p>
+<p>In Sample Image below, the credentials are:</p>
+<p><strong>SERVER KEY:</strong> AAAAZrAi7r4:APA91bEjeLzjlqsDaym0Y_kVas-2WBlqrO0hfUQLajbg2xUF2SDBqFDBknE2aU_ZYruN8GYRur23cidmYkCDMUEiq9rSimRqHy9_UHPvY5uoBgSB7ZaojA16E6qOLxnyHrzc_Wg8rx (email: vrferrer.halcyondigital)</p>
+<p><strong>SENDER ID:</strong> 441041743550 (email: vrferrer.halcyondigital)</p>
+<h3><a class="anchor" aria-hidden="true" id="configure-onesignal-application"></a><a href="#configure-onesignal-application" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configure OneSignal Application</h3>
+<p>We will use OneSignal to send push notifications. Visit OneSignal and create an account if you haven’t already.</p>
+<h4><a class="anchor" aria-hidden="true" id="configure-onesignal-android-platform-settings"></a><a href="#configure-onesignal-android-platform-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configure OneSignal Android Platform Settings.</h4>
+<ul>
+<li>After login to One Signal, click on Add new app.</li>
+<li>Type a name for your application in the appeared pop up. Here, we use “AppseedPushNotifications” as an App Name.</li>
+</ul>
+<p><img src="https://kmramirez3.github.io/ionic-documentation/img/5.png" alt="Image of OneSignal New App"></p>
+<ul>
+<li>Select the platform that you want to configure with OneSignal push notifications and click NEXT. For this tutorial, select Google Android (GCM).</li>
+</ul>
+<p><img src="https://kmramirez3.github.io/ionic-documentation/img/6.png" alt="Image of OneSignal New App"></p>
+<ul>
+<li>Next, enter your Google Server API Key and Google Project Number and click SAVE. These are the details you got from the Firebase console in the previous step.</li>
+</ul>
+<p><img src="https://kmramirez3.github.io/ionic-documentation/img/7.png" alt="Image of OneSignal New App"></p>
+<ul>
+<li>Then, select the target SDK for your app. In our case, we are making an Ionic app so select, PhoneGap, Cordova, Ionic, Intel XDK and click NEXT.</li>
+</ul>
+<p><img src="https://kmramirez3.github.io/ionic-documentation/img/8.png" alt="Image of OneSignal New App"></p>
+<ul>
+<li>As a final step, take a note of the OneSignal App ID, as we will use it in our application later.</li>
+</ul>
+<p><img src="https://kmramirez3.github.io/ionic-documentation/img/9.png" alt="Image of OneSignal New App">
+<em>(You can’t click done unless there is one subscriber user)</em></p>
+<h2><a class="anchor" aria-hidden="true" id="onesignal-implementation"></a><a href="#onesignal-implementation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OneSignal Implementation</h2>
+<hr>
+<p>After setup, you need to update keys and ids located on <strong>providers/globals.ts</strong></p>
+<pre><code class="hljs css language-ts">restApiKey= <span class="hljs-string">'OTAyNDg0NWMtODEwYy00YmFkLWFkNjMtY2I0OGVlYzczZDU3'</span>
+oneSignalAppId = <span class="hljs-string">'2b9a43f4-8003-4ff4-802b-1ca4b3deef50'</span>
+senderId = <span class="hljs-string">'441041743550'</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="send-push-notification"></a><a href="#send-push-notification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Send Push Notification</h2>
+<hr>
+<p>There are two ways to send push notification on OneSignal:</p>
+<h3><a class="anchor" aria-hidden="true" id="post-request"></a><a href="#post-request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>POST Request</h3>
+<pre><code class="hljs css language-ts"><span class="hljs-keyword">import</span> { GlobalsProvider } <span class="hljs-keyword">from</span> <span class="hljs-string">'../../../providers/globals'</span>;
+<span class="hljs-keyword">constructor</span>(<span class="hljs-params"> <span class="hljs-keyword">public</span> globals: GlobalsProvider </span>) { }
+
+sendPushNotif() {
+  <span class="hljs-keyword">this</span>.http.post(<span class="hljs-string">'https://onesignal.com/api/v1/notifications'</span>,
+  {
+    app_id: <span class="hljs-keyword">this</span>.globals.oneSignalAppId,
+    contents: { en: <span class="hljs-string">'Test Push Notif'</span> },
+    included_segments: [<span class="hljs-string">'All'</span>] <span class="hljs-comment">//this notif will be sent to all the subscribed users</span>
+  },
+  {
+    headers: <span class="hljs-keyword">new</span> HttpHeaders({
+      <span class="hljs-string">'Authorization'</span>: <span class="hljs-string">`Basic <span class="hljs-subst">${this.globals.restApiKey}</span>`</span>,
+      <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>
+    })
+  }).toPromise().then(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(data)
+  }).catch(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(err)
+  })
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="onesignal-dashboard"></a><a href="#onesignal-dashboard" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OneSignal Dashboard</h3>
+<p>After running the application visit OneSignal <a href="https://onesignal.com/">https://onesignal.com/</a> . Select your application. Here you can see the number of users who have been registered for receiving push notifications.</p>
+<p>Go ahead and send a message. To do this, navigate to OneSignal dashboard and click <strong>MESSAGES</strong>.</p>
+<p>Click <strong>NEW PUSH</strong>.</p>
+<p>Type the preferred title and message and click <strong>CONFIRM</strong> in the bottom of the screen.</p>
+<p>Finally, from the appeared pop up click <strong>SEND MESSAGE</strong>.</p>
+<p>Moments later, a push notification will be received in your device.</p>
+<h2><a class="anchor" aria-hidden="true" id="back-end-integration"></a><a href="#back-end-integration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Back-end Integration</h2>
+<hr>
+<p>Both back end and front end can send push notification by accessing the OneSignal API <a href="https://documentation.onesignal.com/reference#create-notification">https://documentation.onesignal.com/reference#create-notification</a></p>
+<p>Give the OneSignal App ID and Rest API Key to your backend developer because it is needed on the body and headers of the POST request</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/ionic-documentation/docs/providers"><span class="arrow-prev">← </span><span>Ionic Providers</span></a><a class="docs-next button" href="/ionic-documentation/docs/socket-io"><span>Real Time Engine</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#onesignal-setup">OneSignal Setup</a><ul class="toc-headings"><li><a href="#generate-a-google-server-api-key-server-key">Generate a Google Server API Key (SERVER KEY)</a></li><li><a href="#configure-onesignal-application">Configure OneSignal Application</a></li></ul></li><li><a href="#onesignal-implementation">OneSignal Implementation</a></li><li><a href="#send-push-notification">Send Push Notification</a><ul class="toc-headings"><li><a href="#post-request">POST Request</a></li><li><a href="#onesignal-dashboard">OneSignal Dashboard</a></li></ul></li><li><a href="#back-end-integration">Back-end Integration</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/ionic-documentation/" class="nav-home"><img src="/ionic-documentation/img/ionic-logo.png" alt="Ionic Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/ionic-documentation/docs/en/coding-convention.html">Getting Started (or other categories)</a><a href="/ionic-documentation/docs/en/modules.html">Guides (or other categories)</a><a href="/ionic-documentation/docs/en/pipes.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/ionic-documentation/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/ionic-documentation/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/ionic-documentation/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Your Name or Your Company Name</section></footer></div></body></html>

@@ -6,7 +6,7 @@
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://kmramirez3.github.io/ionic-documentation/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Ionic Documentation news and events.</subtitle>
-    <logo>https://kmramirez3.github.io/ionic-documentation/img/favicon.ico</logo>
+    <logo>https://kmramirez3.github.io/ionic-documentation/img/ionic-logo.png</logo>
     <rights>Copyright © 2019 Your Name or Your Company Name</rights>
     <entry>
         <title type="html"><![CDATA[New Version 1.0.0]]></title>

@@ -17,4 +17,6 @@
 <url> <loc>https://kmramirez3.github.io/ionic-documentation/docs/pipes</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kmramirez3.github.io/ionic-documentation/docs/pipes" /> </url>
 <url> <loc>https://kmramirez3.github.io/ionic-documentation/docs/plugins</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kmramirez3.github.io/ionic-documentation/docs/plugins" /> </url>
 <url> <loc>https://kmramirez3.github.io/ionic-documentation/docs/providers</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kmramirez3.github.io/ionic-documentation/docs/providers" /> </url>
+<url> <loc>https://kmramirez3.github.io/ionic-documentation/docs/push-notification</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kmramirez3.github.io/ionic-documentation/docs/push-notification" /> </url>
+<url> <loc>https://kmramirez3.github.io/ionic-documentation/docs/socket-io</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kmramirez3.github.io/ionic-documentation/docs/socket-io" /> </url>
 </urlset>
